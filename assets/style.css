@@ -1,0 +1,173 @@
+/* I prefer that people do not copy it if they could, but for specific cases you can ask me for permission. moddi out. */
+
+html {
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    overflow-y: auto;   /* Enable vertical scrolling */
+    height: 100%;
+    background: #07001a;
+    color: white; /* Ensure text is visible */
+    list-style-type: none;
+}
+
+@font-face {
+    font-family: 'mochimatic';
+    src: url('{{ config.siteurl }}assets/font/Mochimatic.ttf') format('truetype')
+    font-weight: bolder;
+    font-style: normal;
+}
+
+.container {
+    margin: 0;
+    padding-left: 30px;
+    height: 100%;
+    width: 100vw;
+    position: relative;
+    top: 60px;
+    z-index: 1;
+    color: #d8d2ef;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+}
+
+.main-content {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+.main-content ul,
+.main-content ol {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+.main-content ul li,
+.main-content ol li {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+.sub-content {
+    font-size: 13px;
+    margin-top: 28px;
+}
+
+#bar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+    position: fixed; /* Make sure it stays fixed at the top */
+    color: #DDDDDD; /* Ensure text is visible */
+    background-color: #201560;
+}
+
+.barTitle {
+    font-family: 'mochimatic', sans-serif;
+    color: #462cd8;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 5px;
+    margin-top: 5px;
+    font-size: 48px;
+
+    /* Start lower, then animate upward */
+    animation: slideIn 3s linear forwards;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-40px); }
+    to   { transform: translateY(0); }
+}
+
+pre {
+    background-color: #292A3A;
+    color: #DDD;
+    padding: 1em;
+    border: 5px dotted #292A6A;
+}
+
+
+button {
+    padding: 3px;
+    width: 130px;
+    border-radius: 5px;
+    margin-left: 15px;
+    margin-top: 3px;
+    background-color: #eeb43388;
+    border: 0px solid #a5760e99;
+    color: #331133;
+    font-size:22px;
+    transition: border 0.1s linear, background-color 0.5s ease, color 0.6s ease, margin-top 0.2s ease;
+}
+
+button:hover {
+    margin-top: 4px;
+    background-color: #eeb433bb;
+    border: 3px solid #a5760ecc;
+    color: #662244;
+}
+
+button:active {
+    margin-top: 10px;
+    background-color: #eeb433ff;
+    border: 5px solid #a5760eff;
+    color: #AA3355;
+}
+
+p .dash-wrap {
+    display: inline-block;    /* treat the dash + rest as one block */
+    white-space: nowrap;      /* don’t break inside it */
+    vertical-align: top;      /* align nicely with prefix if wrapped */
+}
+
+p {
+    font-size: 20px;
+    margin: 3px;
+    padding-left: 4px;
+    padding-bottom: 2px;
+}
+
+a {
+    color: #ee8899;
+    text-decoration: none;
+}
+
+table, th, td {
+    border: 1px solid #fdd;
+    text-align: left;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+    border: none;
+}
+
+th, td {
+    padding: 1px 12px;
+    border: none;
+    border-right: 0.1px solid #ffdddd66;
+    border-bottom: 0.1px solid #fdd;
+}
+
+td:first-child {
+    text-align: left;
+}
+
+td:last-child, th:last-child {
+    border-right: none;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+thead th {
+    padding: 6px 12px;
+    text-align: center;
+    border-right: 0.1px solid #ffdddd66;
+    border-bottom: 1px solid #fdd;
+}
