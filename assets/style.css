@@ -12,7 +12,8 @@ html {
 
 @font-face {
     font-family: 'mochimatic';
-    src: url('{{ config.siteurl }}assets/font/Mochimatic.ttf') format('truetype')
+    src: url('{{ config.siteurl }}assets/font/Mochimatic.woff') format('woff'),
+         url('{{ config.siteurl }}assets/font/Mochimatic.ttf') format('truetype');
     font-weight: bolder;
     font-style: normal;
     text-rendering: optimizeLegibility;
@@ -173,4 +174,5 @@ thead th {
     border-right: 0.1px solid #ffdddd66;
     border-bottom: 1px solid #fdd;
 }
+
 
